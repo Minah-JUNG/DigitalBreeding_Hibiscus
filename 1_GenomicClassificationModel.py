@@ -214,7 +214,7 @@ def model_googlenet(tmp, tmp_categ):
 
 # 결과 파일 폴더 생성
 Today = datetime.today().strftime("%Y%m%d")
-dir = '/BiO/Majung_work_2022/10_Hibiscus_GeneticMap/30_Results/'
+dir = '/mnt/d/Documents'
 if not (os.path.isdir(os.path.join(dir, 'All_validation_result_'+ Today))):
     os.makedirs(os.path.join(dir, 'All_validation_result_' + Today))
 save_dir = os.path.join(dir, 'All_validation_result_' + Today)
@@ -235,7 +235,7 @@ sample_result = pd.DataFrame(columns=columns)
 for idx_scenario in range(0, 14):
     # 0 -> 전체이미지(Ref)
     # 1 -> Chr 별
-    # 2 - 11 -> Chr의 Piece 별(토마토는 2 - 13)
+    # 2 - 11 -> Chr의 Piece 별
 
     result_prob = []
     max_acc = 0.80
